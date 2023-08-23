@@ -1,0 +1,35 @@
+/* FONTS */
+@font-face {
+  font-family: "Dana";
+  font-weight: 500;
+  src: url("../font/Dana-FaNum-Medium.ttf");
+}
+@font-face {
+  font-family: "Dana-Light";
+  font-weight: 300;
+  src: url("../font/Dana-FaNum-Light.ttf");
+}
+@font-face {
+  font-family: "Dana-Reg";
+  font-weight: normal;
+  src: url("../font/Dana-FaNum-Regular.ttf");
+}
+@font-face {
+  font-family: "Dana-Demi";
+  font-weight: 600;
+  src: url("../font/Dana-FaNum-DemiBold.ttf");
+}
+@font-face {
+  font-family: "Dana-Bold";
+  font-weight: bold;
+  src: url("../font/Dana-FaNum-Bold.ttf");
+}
+
+/* GLOBAL STYLE */
+* {
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  font-family: "Dana";
+  box-sizing: border-box;
+}
