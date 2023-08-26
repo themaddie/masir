@@ -11,10 +11,10 @@ const Dashed = ({ header, text }) => {
     justify-content: center;
     gap: 0.8rem;
   `;
-  const Image = styled.img`
-    width: 50%;
+  const Image = styled.img``;
+  const Text = styled.span`
+    text-align: center;
   `;
-  const Text = styled.span``;
   const Title = styled.h1`
     font-size: ${(props) => props.theme.fontSize.ultra};
   `;

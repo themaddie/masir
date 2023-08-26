@@ -62,5 +62,6 @@ export const theme = {
     medium: 1.5 /* 24px */,
     regular: 1.25 /* 20px */,
     light: 1 /* 16px */,
+    lighter: 0.75 /* 12px */
   },
 };
