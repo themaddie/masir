@@ -64,4 +64,9 @@ export const theme = {
     light: 1 /* 16px */,
     lighter: 0.75 /* 12px */
   },
+  breakPoints: {
+    desktop: 1024,
+    tablet: 768,
+    phone: 320
+  }
 };
