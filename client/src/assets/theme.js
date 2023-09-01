@@ -36,6 +36,13 @@ export const GlobalStyle = createGlobalStyle`
   font-family: "Dana";
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 `;
 
 export const theme = {
@@ -64,9 +71,9 @@ export const theme = {
     light: 1 /* 16px */,
     lighter: 0.75 /* 12px */
   },
-  breakPoints: {
+  breakpoint: {
     desktop: 1024,
-    tablet: 768,
+    tablet: 800,
     phone: 320
   }
 };
