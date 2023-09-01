@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Roads = () => {
+const Header = () => {
     return (
         <div>
-            road
+            header
         </div>
     );
 };
 
-export default Roads;
+export default Header;

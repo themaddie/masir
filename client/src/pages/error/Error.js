@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Roads = () => {
+const Error = () => {
     return (
         <div>
-            road
+            404 not found
         </div>
     );
 };
 
-export default Roads;
+export default Error;

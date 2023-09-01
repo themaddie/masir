@@ -1,4 +1,3 @@
-import Input from "../widgets/Input";
 import { styled, useTheme } from "styled-components";
 
 const Login = () => {
@@ -12,7 +11,7 @@ const Login = () => {
     align-items: center;
   `;
   return (<Wrapper>
-    <Input  type="checkbox" id="vehicle1" name="vehicle1" value="Bike" icon="false"/>
+    login
   </Wrapper>);
 };
 

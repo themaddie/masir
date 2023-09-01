@@ -5,11 +5,15 @@ import App from './App';
 import { theme } from "./assets/theme";
 import { GlobalStyle } from './assets/theme';
 import { ThemeProvider } from 'styled-components';
+// ROUTE
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <App />
-  </ThemeProvider>
+  <BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>
 );

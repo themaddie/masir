@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Roads = () => {
+const Footer = () => {
     return (
         <div>
-            road
+            footer
         </div>
     );
 };
 
-export default Roads;
+export default Footer;
