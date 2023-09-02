@@ -16,7 +16,6 @@ const Home = () => {
         height: 90vh;
         flex-direction: column;
         gap: 20px;
-        background-color: red;
     }
     @media (max-width: ${breakpoint.phone}px) {
         height: 90vh;
@@ -32,7 +31,8 @@ const Home = () => {
     `;
     return (
         <Wrapper>
-            <Today>Today</Today>
+            <Today>
+            </Today>
             <Info>Info</Info>
         </Wrapper>
     );

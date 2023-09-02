@@ -1,6 +1,8 @@
 // STYLE
 import { styled, useTheme } from "styled-components";
 import { Add } from "@mui/icons-material";
+// COMPONENT
+import Step from "../../../features/step/Step";
 
 const Today = () => {
   const { palette, fontSize, breakpoint } = useTheme();
@@ -35,12 +37,39 @@ const Today = () => {
     font-weight: 600;
     cursor: default;
   `;
+  const Box = styled.div`
+    width: 100%;
+    max-height: calc(85vh - 150px);
+    margin: 25px 0 15px 0;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+  `;
   return (
     <Wrapper>
       <Title>
         <Text>گام‌های امروز</Text>
         <Add style={{ width: "38px", height: "38px", cursor: "pointer" }} />
       </Title>
+      <Box>
+        <Step number="1" />
+        <Step number="2" />
+        <Step number="3" />
+        <Step number="4" />
+        <Step number="5" />
+        <Step number="6" />
+        <Step number="7" />
+        <Step number="8" />
+        <Step number="9" />
+        <Step number="10" />
+        <Step number="11" />
+        <Step number="12" />
+        <Step number="13" />
+        <Step number="14" />
+        <Step number="15" />
+      </Box>
     </Wrapper>
   );
 };
