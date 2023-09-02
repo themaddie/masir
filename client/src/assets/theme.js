@@ -36,13 +36,6 @@ export const GlobalStyle = createGlobalStyle`
   font-family: "Dana";
   box-sizing: border-box;
 }
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 `;
 
 export const theme = {

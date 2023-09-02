@@ -7,31 +7,40 @@ const Home = () => {
     const { palette, breakpoint } = useTheme();
 
     const Wrapper = styled.div`
-    width: 85vw;
+    width: 100vw;
     height: 100vh;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content: center;
     align-items: center;
-    @media (max-width: ${breakpoint.tablet}px) {
-        height: 90vh;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 50px;
+     @media (max-width: ${breakpoint.tablet}px) {
+    /* grid-template-columns: auto auto auto;  */
+        /* height: 90vh;
         flex-direction: column;
-        gap: 20px;
+        gap: 20px; */
     }
+
     @media (max-width: ${breakpoint.phone}px) {
-        height: 90vh;
-        flex-direction: column;
+    /* grid-template-columns: auto;  */
+        /* height: 90vh;
+        flex-direction: column; */
     }
     `;
     const Info = styled.div`
-    width: 38%;
-    height: 85px;
-    background-color: white;
+    /* width: 38%;
+    height: 85px; */
+    /* width: 100%; */
+    height: 80%;
+    background-color: black;
     border: 2px solid ${palette.black};
     border-radius: 10px;
+    grid-column: 4 / 6;
     `;
     return (
         <Wrapper>
             <Today>
+                hi
             </Today>
             <Info>Info</Info>
         </Wrapper>

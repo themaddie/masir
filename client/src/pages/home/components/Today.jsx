@@ -8,18 +8,21 @@ const Today = () => {
   const { palette, fontSize, breakpoint } = useTheme();
 
   const Wrapper = styled.div`
-    width: 50%;
-    height: 85vh;
+    /* width: 40%;
+    height: 85vh; */
+
+    grid-column: 2 / 4;
     border: 2px solid ${palette.black};
     border-radius: 10px;
-    @media (max-width: ${breakpoint.tablet}px) {
+    background-color: red;
+    /* @media (max-width: ${breakpoint.tablet}px) {
       width: 90%;
       height: 100%;
     }
     @media (max-width: ${breakpoint.phone}px) {
       width: 90%;
       height: 100%;
-    }
+    } */
   `;
   const Title = styled.div`
     width: 100%;
