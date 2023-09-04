@@ -8,27 +8,17 @@ const Today = () => {
   const { palette, fontSize, breakpoint } = useTheme();
 
   const Wrapper = styled.div`
-    /* width: 40%;
-    height: 85vh; */
-
-    grid-column: 2 / 4;
+    width: 100%;
+    height: 100%;
     border: 2px solid ${palette.black};
     border-radius: 10px;
-    background-color: red;
-    /* @media (max-width: ${breakpoint.tablet}px) {
-      width: 90%;
-      height: 100%;
-    }
-    @media (max-width: ${breakpoint.phone}px) {
-      width: 90%;
-      height: 100%;
-    } */
   `;
   const Title = styled.div`
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 5% 0 5%;
     align-items: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -36,42 +26,45 @@ const Today = () => {
     background-color: ${palette.primary};
   `;
   const Text = styled.h1`
-    font-size: ${fontSize.demi}rem;
+    font-size: ${fontSize.medium}rem;
     font-weight: 600;
     cursor: default;
+    @media (max-width: ${breakpoint.phone}px) {
+      font-size: ${fontSize.regular}rem;
+    }
   `;
   const Box = styled.div`
     width: 100%;
-    max-height: calc(85vh - 150px);
-    margin: 25px 0 15px 0;
+    max-height: calc(100% - 110px);
     overflow: scroll;
     display: flex;
-    flex-direction: column;
-    gap: 35px;
     align-items: center;
+    flex-direction: column;
+    margin: 15px 0 5px 0;
+    gap: 25px;
   `;
+
   return (
     <Wrapper>
       <Title>
         <Text>گام‌های امروز</Text>
-        <Add style={{ width: "38px", height: "38px", cursor: "pointer" }} />
+        <Add style={{ width: "32px", height: "32px", cursor: "pointer" }} />
       </Title>
       <Box>
-        <Step number="1" />
-        <Step number="2" />
-        <Step number="3" />
-        <Step number="4" />
-        <Step number="5" />
-        <Step number="6" />
-        <Step number="7" />
-        <Step number="8" />
-        <Step number="9" />
-        <Step number="10" />
-        <Step number="11" />
-        <Step number="12" />
-        <Step number="13" />
-        <Step number="14" />
-        <Step number="15" />
+        <Step step="پیانو" label={palette.roads.gray} done={true} />
+        <Step step="پروژه ری اکت" label={palette.roads.pink} done={false} />
+        <Step step="تمیز کردن خونه" label={palette.roads.pink} done={false} />
+        <Step step="قصه نوشتن" label={palette.roads.purple} done={false} />
+        <Step step="کنکور" label={palette.roads.blue} done={true} />
+        <Step step="غذا درست کردن برای مهمونی فردا که خیلی مهم و حیاتیه" label={palette.roads.green} done={false} />
+        <Step step="تسک ۸" label={palette.roads.blue} done={false} />
+        <Step step="تسک ۹" label={palette.roads.yellow} done={false} />
+        <Step step="10" label={palette.roads.pink} done={false} />
+        <Step step="11" label={palette.roads.pink} done={false} />
+        <Step step="12" label={palette.roads.pink} done={false} />
+        <Step step="13" label={palette.roads.pink} done={false} />
+        <Step step="14" label={palette.roads.pink} done={false} />
+        <Step step="15" label={palette.roads.green} done={false} />
       </Box>
     </Wrapper>
   );

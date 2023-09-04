@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 /* FONTS */
 @font-face {
-  font-family: "Dana";
+  font-family: "Dana-Reg";
   font-weight: 500;
   src: url("./fonts/Dana-FaNum-Medium.ttf");
 }
@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   src: url("./fonts/Dana-FaNum-Light.ttf");
 }
 @font-face {
-  font-family: "Dana-Reg";
+  font-family: "Dana";
   font-weight: normal;
   src: url("./fonts/Dana-FaNum-Regular.ttf");
 }
@@ -67,6 +67,6 @@ export const theme = {
   breakpoint: {
     desktop: 1024,
     tablet: 800,
-    phone: 320
+    phone: 600
   }
 };

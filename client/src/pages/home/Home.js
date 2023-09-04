@@ -2,47 +2,57 @@
 import { styled, useTheme } from "styled-components";
 // COMPONENT
 import Today from "./components/Today";
+import DateBox from "./components/DateBox";
 
 const Home = () => {
-    const { palette, breakpoint } = useTheme();
-
+    const { breakpoint } = useTheme();
+    // BODY
     const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
     display: grid;
-    justify-content: center;
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 50px;
-     @media (max-width: ${breakpoint.tablet}px) {
-    /* grid-template-columns: auto auto auto;  */
-        /* height: 90vh;
-        flex-direction: column;
-        gap: 20px; */
-    }
-
+    justify-content: center;
     @media (max-width: ${breakpoint.phone}px) {
-    /* grid-template-columns: auto;  */
-        /* height: 90vh;
-        flex-direction: column; */
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
     `;
-    const Info = styled.div`
-    /* width: 38%;
-    height: 85px; */
-    /* width: 100%; */
-    height: 80%;
-    background-color: black;
-    border: 2px solid ${palette.black};
-    border-radius: 10px;
-    grid-column: 4 / 6;
+    const Right = styled.div`
+    grid-column: 2 / span 3;
+    height: 80vh;
+     @media (max-width: ${breakpoint.tablet}px) {
+    grid-column: 2 / span 4;
+    margin: 0% 0% 0% 20%;
+    }
+    @media (max-width: ${breakpoint.phone}px) {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 10% 10% 10% 10%;
+    }
     `;
+    const Left = styled.div`
+    grid-column: 6 / span 2;
+    height: 80vh;
+     @media (max-width: ${breakpoint.tablet}px) {
+    grid-column: 6 / span 2;
+    }
+    @media (max-width: ${breakpoint.phone}px) {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0% 10% 10% 10%;
+    }
+    `;
+
     return (
         <Wrapper>
-            <Today>
-                hi
-            </Today>
-            <Info>Info</Info>
+            <Right>
+                <Today />
+            </Right>
+            <Left>
+                <DateBox />
+            </Left>
         </Wrapper>
     );
 };
