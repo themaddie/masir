@@ -3,6 +3,10 @@ import { styled, useTheme } from "styled-components";
 // COMPONENT
 import Today from "./components/Today";
 import DateBox from "./components/DateBox";
+import RoadsBox from "./components/RoadsBox";
+import MapsBox from "./components/MapsBox";
+import AboutBox from "./components/AboutBox";
+import ProfileBox from "./components/ProfileBox";
 
 const Home = () => {
     const { breakpoint } = useTheme();
@@ -29,11 +33,14 @@ const Home = () => {
     @media (max-width: ${breakpoint.phone}px) {
     grid-column: 1;
     grid-row: 1;
-    margin: 10% 10% 10% 10%;
+    margin: 5% 10% 5% 10%;
     }
     `;
     const Left = styled.div`
     grid-column: 6 / span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
     height: 80vh;
      @media (max-width: ${breakpoint.tablet}px) {
     grid-column: 6 / span 2;
@@ -41,8 +48,14 @@ const Home = () => {
     @media (max-width: ${breakpoint.phone}px) {
     grid-column: 1;
     grid-row: 2;
-    margin: 0% 10% 10% 10%;
+    margin: 0% 10% 0% 10%;
+    padding-bottom: 10%;
     }
+    `;
+    const Box = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     `;
 
     return (
@@ -52,6 +65,12 @@ const Home = () => {
             </Right>
             <Left>
                 <DateBox />
+                <Box>
+                    <ProfileBox name="مهدیه" />
+                    <AboutBox />
+                </Box>
+                <RoadsBox />
+                <MapsBox />
             </Left>
         </Wrapper>
     );

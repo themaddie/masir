@@ -46,6 +46,7 @@ export const theme = {
     alt: "#D9D9D9",
     black: "#000000",
     white: "#FFFFFF",
+    disable: "#A6A6A6",
     roads: {
       yellow: "#FCA311",
       pink: "#FC1157",
@@ -68,5 +69,9 @@ export const theme = {
     desktop: 1024,
     tablet: 800,
     phone: 600
+  },
+  border: {
+    size: 2,
+    radius: 10
   }
 };

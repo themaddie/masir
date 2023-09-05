@@ -3,8 +3,7 @@ import { styled, useTheme } from "styled-components";
 import { CheckBoxOutlineBlank, EditOutlined, CheckBox } from "@mui/icons-material";
 
 const Step = ({ step, label, done }) => {
-    // STATE
-    const { palette, fontSize, breakpoint } = useTheme();
+    const { palette, fontSize, breakpoint, border } = useTheme();
 
     const Wrapper = styled.div`
     width: 90%;
@@ -14,7 +13,7 @@ const Step = ({ step, label, done }) => {
     align-items: center;
     justify-content: space-between;
     padding: 2%;
-    border-right: 2px solid ${label};
+    border-right: ${border.size}px solid ${label};
     `;
     const Text = styled.span`
     max-width: 400px;
@@ -31,7 +30,7 @@ const Step = ({ step, label, done }) => {
     font-weight: 600;
     }
     `;
-    const Box = styled.div`
+    const Content = styled.div`
     display: flex;
     align-items: center;
     gap: 20%;
@@ -43,14 +42,14 @@ const Step = ({ step, label, done }) => {
     return (
         <Wrapper>
             <Text> {step} </Text>
-            <Box>
+            <Content>
                 {
                     done ?
                         (<CheckBox style={{ width: "22px", height: "22px", cursor: "pointer" }} />) :
                         (<CheckBoxOutlineBlank style={{ width: "22px", height: "22px", cursor: "pointer" }} />)
                 }
                 <EditOutlined style={{ width: "22px", height: "22px", cursor: "pointer" }} />
-            </Box>
+            </Content>
         </Wrapper>
     );
 };
