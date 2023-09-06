@@ -42,14 +42,6 @@ const RoadsBox = () => {
     overflow: scroll;
     padding: 0 5% 0 0;
   `;
-  // const Box = styled.div`
-  //   width: 100%;
-  //   height: 100%;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: center;
-  //   flex-wrap: wrap;
-  // `;
   const Right = styled.div`
     width: 50%;
     height: 100%;
@@ -84,7 +76,6 @@ const RoadsBox = () => {
       </Title>
       <Content>
         <Right>
-          {/* <Box> */}
           <Label color={palette.roads.gray} name="زندگی" />
           <Label color={palette.roads.yellow} name="کار" />
           <Label color={palette.roads.pink} name="درس" />
@@ -94,7 +85,6 @@ const RoadsBox = () => {
           <Label color={palette.roads.green} name="کنکور" />
           <Label color={palette.roads.blue} name="تفریح" />
         </Left>
-        {/* </Box> */}
       </Content>
     </Wrapper>
   );

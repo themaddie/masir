@@ -19,13 +19,10 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="home" element={<Home />} />
-        <Route path="page/" element={<Layout />}>
-          <Route index element={<Error />} />
-          <Route path="about" element={<About />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="roads" element={<Roads />} />
-          <Route path="maps" element={<Maps />} />
-        </Route>
+        <Route path="about" element={<About title="درباره ما" />} />
+        <Route path="profile" element={<Profile title="پروفایل" />} />
+        <Route path="roads" element={<Roads title="مسیرها" />} />
+        <Route path="maps" element={<Maps title="نقشه‌ها" />} />
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>
