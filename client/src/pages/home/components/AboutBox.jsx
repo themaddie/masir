@@ -50,7 +50,7 @@ const AboutBox = () => {
   return (
     <Wrapper>
       <Title>
-        <Link to="/page/about" style={{ width: "22px", height: "22px" }}>
+        <Link to="/about" style={{ width: "22px", height: "22px" }}>
           <QuestionMarkOutlined
             style={{
               width: "22px",

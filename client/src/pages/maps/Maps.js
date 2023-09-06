@@ -8,7 +8,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 const Maps = ({ title }) => {
-    const { palette, fontSize } = useTheme();
+    const { palette } = useTheme();
 
     const Wrapper = styled.div`
     width: 100vw;

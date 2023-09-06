@@ -48,7 +48,7 @@ const MapsBox = () => {
     <Wrapper>
       <Title>
         <Text>مدیریت نقشه‌ها</Text>
-        <Link to="/page/maps" style={{ width: "22px", height: "22px" }}>
+        <Link to="/maps" style={{ width: "22px", height: "22px" }}>
           <MapOutlined
             style={{
               width: "22px",

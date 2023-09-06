@@ -63,7 +63,7 @@ const RoadsBox = () => {
     <Wrapper>
       <Title>
         <Text>مدیریت مسیرها</Text>
-        <Link to="/page/roads" style={{ width: "22px", height: "22px" }}>
+        <Link to="/roads" style={{ width: "22px", height: "22px" }}>
           <AddRoad
             style={{
               width: "22px",

@@ -48,7 +48,7 @@ const ProfileBox = ({ name }) => {
   return (
     <Wrapper>
       <Title>
-        <Link to="/page/profile" style={{ width: "22px", height: "22px" }}>
+        <Link to="/profile" style={{ width: "22px", height: "22px" }}>
           <ManageAccountsOutlined
             style={{
               width: "22px",
