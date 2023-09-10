@@ -25,7 +25,6 @@ const Home = () => {
     `;
     const Right = styled.div`
     grid-column: 2 / span 3;
-    height: 80vh;
      @media (max-width: ${breakpoint.tablet}px) {
     grid-column: 2 / span 4;
     margin: 0% 0% 0% 20%;
@@ -40,8 +39,7 @@ const Home = () => {
     grid-column: 6 / span 2;
     display: flex;
     flex-direction: column;
-    gap: 2%;
-    height: 80vh;
+    gap: 7px;
      @media (max-width: ${breakpoint.tablet}px) {
     grid-column: 6 / span 2;
     }

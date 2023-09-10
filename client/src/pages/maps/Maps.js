@@ -15,7 +15,7 @@ const Maps = ({ title }) => {
     height: 100vh;
     `;
     const Content = styled.div`
-    min-height: 80vh;
+    min-height: calc(100vh - 170px);
     display: flex;
     flex-direction: column;
     justify-content: center;

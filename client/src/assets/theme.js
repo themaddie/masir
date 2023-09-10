@@ -67,8 +67,9 @@ export const theme = {
   },
   breakpoint: {
     desktop: 1024,
-    tablet: 800,
-    phone: 600
+    tablet: 824,
+    phone: 624,
+    sm: 424
   },
   border: {
     size: 2,

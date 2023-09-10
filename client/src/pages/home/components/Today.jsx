@@ -9,7 +9,7 @@ const Today = () => {
 
   const Wrapper = styled.div`
     width: 100%;
-    height: 100%;
+    height: 650px;
     border: ${border.size}px solid ${palette.black};
     border-radius: ${border.radius}px;
     color: ${palette.black};
