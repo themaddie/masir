@@ -18,14 +18,14 @@ const Error = () => {
     `;
     const ErrNum = styled.h1`
     font-size: 5rem;
-    color: ${palette.black};
+    color: ${palette.error};
     cursor: default;
     `;
     const NotFound = styled.h3`
     font-weight: 500;
     font-size: ${fontSize.medium}rem;
-    color: ${palette.roads.pink};
     cursor: default;
+    color: ${palette.black};
     `;
     return (
         <Wrapper>

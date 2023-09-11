@@ -47,6 +47,7 @@ export const theme = {
     black: "#000000",
     white: "#FFFFFF",
     disable: "#A6A6A6",
+    error: "#FF1B1B",
     roads: {
       yellow: "#FCA311",
       pink: "#FC1157",

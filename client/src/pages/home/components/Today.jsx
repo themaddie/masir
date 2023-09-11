@@ -3,6 +3,8 @@ import { styled, useTheme } from "styled-components";
 import { Add } from "@mui/icons-material";
 // COMPONENT
 import Step from "../../../features/step/Step";
+import AddTodayModal from "./AddTodayModal";
+import EditTodayModal from "./EditTodayModal";
 
 const Today = () => {
   const { palette, fontSize, breakpoint, border } = useTheme();
@@ -44,6 +46,7 @@ const Today = () => {
     margin: 15px 0 5px 0;
     gap: 25px;
   `;
+
   return (
     <Wrapper>
       <Title>
@@ -70,6 +73,7 @@ const Today = () => {
         <Step step="14" label={palette.roads.pink} done={false} />
         <Step step="15" label={palette.roads.green} done={false} />
       </Content>
+
     </Wrapper>
   );
 };
