@@ -30,7 +30,7 @@ const Roads = ({ title }) => {
 
     return (
         <Wrapper>
-            <Header title={title} />
+            <Header title="مسیرها" />
             <Content>
                 <Road name="زندگی" color={palette.roads.gray} />
                 <Road name="کار" color={palette.roads.yellow} />

@@ -40,7 +40,7 @@ const About = ({ title }) => {
 
     return (
         <Wrapper>
-            <Header title={title} />
+            <Header title="درباره ما" />
             <Content>
                 <Text>مسیـ ـ ـر، ثمره یک دغدغه است.</Text>
                 <Text>دغدغه پیدا کردن مفهوم «لذت»، در دنیا سریع و شلوغ این روزها.</Text>

@@ -38,7 +38,7 @@ const Maps = ({ title }) => {
                     و به زودی با کلی فیچر باحال منتشر میشه!</Text>
                 <Text>می‌تونی تو این مدت، تجربه‌ات از نسخه فعلی رو برامون بفرستی
                     یا حتی یه لیوان چایی برامون بخری!‌ :))</Text>
-                <Link to="/page/about">
+                <Link to="/about">
                     <EmojiFoodBeverageRounded style={{ color: `${palette.disable}`, cursor: "pointer" }} />
                 </Link>
             </Content>
