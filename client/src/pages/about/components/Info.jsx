@@ -1,6 +1,5 @@
 // STYLE
 import { styled, useTheme } from "styled-components";
-import { Add } from "@mui/icons-material";
 
 const Info = ({ title, desc }) => {
   const { palette, fontSize, breakpoint, border } = useTheme();
@@ -41,12 +40,14 @@ const Info = ({ title, desc }) => {
   `;
   const Content = styled.div`
     width: 100%;
-    max-height: calc(100% - 80px);
+    height: calc(100% - 80px);
     margin: 10px 0 5px 0;
     overflow: scroll;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
+    line-height: 40px;
   `;
   const Description = styled.p`
     cursor: default;

@@ -3,7 +3,6 @@ import { styled, useTheme } from "styled-components";
 import {
   BadgeOutlined,
   LockOutlined,
-  EmailOutlined,
 } from "@mui/icons-material";
 // ROUTE
 import { Link } from "react-router-dom";
@@ -61,6 +60,7 @@ const LoginForm = () => {
     color: ${palette.black};
     font-size: ${fontSize.light}rem;
     font-weight: 500;
+    padding: 2%;
   `;
   const Column = styled.div`
     width: 100%;

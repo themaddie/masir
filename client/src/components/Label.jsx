@@ -1,7 +1,7 @@
 // STYLE
 import { styled, useTheme } from "styled-components";
 
-const Label = ({ name, color }) => {
+const Label = ({ name, color, selected }) => {
   const { fontSize } = useTheme();
 
   const Wrapper = styled.div`
@@ -20,7 +20,7 @@ const Label = ({ name, color }) => {
   `;
   const Name = styled.h6`
     font-size: ${fontSize.lighter}rem;
-    font-weight: normal;
+    font-weight: ${selected ? "600" : "normal"};
     cursor: default;
   `;
   return (

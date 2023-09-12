@@ -2,7 +2,7 @@
 import { styled, useTheme } from "styled-components";
 import { Close } from "@mui/icons-material";
 
-const AddModal = () => {
+const AddToRoadModal = ({ modalHandler, name, color }) => {
   const { palette, fontSize, breakpoint, border } = useTheme();
 
   const ModalWrapper = styled.div`
@@ -47,6 +47,14 @@ const AddModal = () => {
     font-size: ${fontSize.medium}rem;
     font-weight: 600;
     cursor: default;
+    @media (max-width: ${breakpoint.phone}px) {
+      font-size: ${fontSize.regular}rem;
+    }
+  `;
+  const Label = styled.span`
+    font-size: ${fontSize.medium}rem;
+    font-weight: 600;
+    color: ${color};
     @media (max-width: ${breakpoint.phone}px) {
       font-size: ${fontSize.regular}rem;
     }
@@ -97,6 +105,7 @@ const AddModal = () => {
     font-size: ${fontSize.light}rem;
     font-weight: normal;
     background-color: ${palette.white};
+    padding: 2%;
   `;
   const ModalSubmit = styled.input.attrs((props) => ({
     type: "submit",
@@ -138,8 +147,13 @@ const AddModal = () => {
     <ModalWrapper>
       <Modal>
         <ModalTitle>
-          <ModalText>اضافه کردن به مسیر</ModalText>
-          <Close style={{ width: "28px", height: "28px", cursor: "pointer" }} />
+          <ModalText>
+            اضافه کردن به مسیر <Label>{name}</Label>
+          </ModalText>
+          <Close
+            style={{ width: "28px", height: "28px", cursor: "pointer" }}
+            onClick={modalHandler}
+          />
         </ModalTitle>
         <ModalContent>
           <InputContainer>
@@ -161,4 +175,4 @@ const AddModal = () => {
   );
 };
 
-export default AddModal;
+export default AddToRoadModal;

@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Road from "../../features/road/Road";
 
-const Roads = ({ title }) => {
+const Roads = () => {
     const { palette, breakpoint } = useTheme();
 
     const Wrapper = styled.div`

@@ -62,6 +62,7 @@ const SignupForm = () => {
     color: ${palette.black};
     font-size: ${fontSize.light}rem;
     font-weight: 500;
+    padding: 2%;
   `;
   const Column = styled.div`
     width: 100%;

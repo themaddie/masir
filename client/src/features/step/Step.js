@@ -1,8 +1,18 @@
+import { useState } from "react";
 // STYLE
 import { styled, useTheme } from "styled-components";
 import { CheckBoxOutlineBlank, EditOutlined, CheckBox } from "@mui/icons-material";
+// COMPONENTS
+import EditStepModal from "./components/EditStepModal";
 
 const Step = ({ step, label, done }) => {
+    // STATE
+    const [modal, setModal] = useState(false);
+
+    const modalHandler = () => {
+        setModal(!modal);
+    };
+
     const { palette, fontSize, breakpoint, border } = useTheme();
 
     const Wrapper = styled.div`
@@ -48,8 +58,12 @@ const Step = ({ step, label, done }) => {
                         (<CheckBox style={{ width: "22px", height: "22px", cursor: "pointer" }} />) :
                         (<CheckBoxOutlineBlank style={{ width: "22px", height: "22px", cursor: "pointer" }} />)
                 }
-                <EditOutlined style={{ width: "22px", height: "22px", cursor: "pointer" }} />
+                <EditOutlined
+                    style={{ width: "22px", height: "22px", cursor: "pointer" }}
+                    onClick={modalHandler}
+                />
             </Content>
+            {modal ? <EditStepModal modalHandler={modalHandler} value={step} /> : ""}
         </Wrapper>
     );
 };

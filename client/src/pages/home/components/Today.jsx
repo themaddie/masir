@@ -1,12 +1,20 @@
+import { useState } from "react";
 // STYLE
 import { styled, useTheme } from "styled-components";
 import { Add } from "@mui/icons-material";
 // COMPONENT
 import Step from "../../../features/step/Step";
 import AddTodayModal from "./AddTodayModal";
-import EditTodayModal from "./EditTodayModal";
 
 const Today = () => {
+  // STATE
+  const [modal, setModal] = useState(false);
+
+  const modalHandler = () => {
+    setModal(!modal);
+  };
+
+  // STYLE
   const { palette, fontSize, breakpoint, border } = useTheme();
 
   const Wrapper = styled.div`
@@ -51,7 +59,10 @@ const Today = () => {
     <Wrapper>
       <Title>
         <Text>گام‌های امروز</Text>
-        <Add style={{ width: "32px", height: "32px", cursor: "pointer" }} />
+        <Add
+          style={{ width: "32px", height: "32px", cursor: "pointer" }}
+          onClick={modalHandler}
+        />
       </Title>
       <Content>
         <Step step="پیانو" label={palette.roads.gray} done={true} />
@@ -73,7 +84,7 @@ const Today = () => {
         <Step step="14" label={palette.roads.pink} done={false} />
         <Step step="15" label={palette.roads.green} done={false} />
       </Content>
-
+      {modal ? <AddTodayModal modalHandler={modalHandler} /> : ""}
     </Wrapper>
   );
 };

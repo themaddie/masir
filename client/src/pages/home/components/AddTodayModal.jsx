@@ -4,10 +4,10 @@ import { Close } from "@mui/icons-material";
 // COMPONENT
 import Label from "../../../components/Label";
 
-const AddTodayModal = () => {
-    const { palette, fontSize, breakpoint, border } = useTheme();
+const AddTodayModal = ({ modalHandler }) => {
+  const { palette, fontSize, breakpoint, border } = useTheme();
 
-    const ModalWrapper = styled.div`
+  const ModalWrapper = styled.div`
     width: 100%;
     height: 100%;
     position: fixed;
@@ -99,6 +99,7 @@ const AddTodayModal = () => {
     font-size: ${fontSize.light}rem;
     font-weight: normal;
     background-color: ${palette.white};
+    padding: 2%;
   `;
   const ModalSubmit = styled.input.attrs((props) => ({
     type: "submit",
@@ -126,7 +127,7 @@ const AddTodayModal = () => {
     }
   `;
   const Row = styled.div`
-  max-width: 90%;
+    max-width: 90%;
     overflow: scroll;
     display: flex;
     flex-direction: row;
@@ -136,37 +137,38 @@ const AddTodayModal = () => {
     margin: 1rem 0 0 0;
   `;
 
-    return (
-        <ModalWrapper>
-        <Modal>
-          <ModalTitle>
-            <ModalText>اضافه کردن به امروز</ModalText>
-            <Close
-              style={{ width: "28px", height: "28px", cursor: "pointer" }}
-            />
-          </ModalTitle>
-          <ModalContent>
-            <InputContainer>
-              <InputTitle>گام</InputTitle>
-              <Input type="text" />
-            </InputContainer>
-            <Row>
-              <Label color={palette.roads.gray} name="زندگی" />
-              <Label color={palette.roads.yellow} name="کار" />
-              <Label color={palette.roads.pink} name="درس" />
-              <Label color={palette.roads.purple} name="جلسه" />
-              <Label color={palette.roads.green} name="کنکور" />
-              <Label color={palette.roads.blue} name="تفریح" />
-            </Row>
-            <Row>
-              <label>میخوای این گام هر روز تکرار بشه؟</label>
-              <input type="checkbox" />
-            </Row>
-            <ModalSubmit />
-          </ModalContent>
-        </Modal>
-      </ModalWrapper>
-    );
+  return (
+    <ModalWrapper>
+      <Modal>
+        <ModalTitle>
+          <ModalText>اضافه کردن به امروز</ModalText>
+          <Close
+            style={{ width: "28px", height: "28px", cursor: "pointer" }}
+            onClick={modalHandler}
+          />
+        </ModalTitle>
+        <ModalContent>
+          <InputContainer>
+            <InputTitle>گام</InputTitle>
+            <Input type="text" />
+          </InputContainer>
+          <Row>
+            <Label color={palette.roads.gray} name="زندگی" />
+            <Label color={palette.roads.yellow} name="کار" />
+            <Label color={palette.roads.pink} name="درس" />
+            <Label color={palette.roads.purple} name="جلسه" />
+            <Label color={palette.roads.green} name="کنکور" />
+            <Label color={palette.roads.blue} name="تفریح" />
+          </Row>
+          <Row>
+            <label>میخوای این گام هر روز تکرار بشه؟</label>
+            <input type="checkbox" />
+          </Row>
+          <ModalSubmit />
+        </ModalContent>
+      </Modal>
+    </ModalWrapper>
+  );
 };
 
 export default AddTodayModal;

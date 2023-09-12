@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const Maps = ({ title }) => {
+const Maps = () => {
     const { palette } = useTheme();
 
     const Wrapper = styled.div`
@@ -32,7 +32,7 @@ const Maps = ({ title }) => {
 
     return (
         <Wrapper>
-            <Header title={title} />
+            <Header title="نقشه‌ها" />
             <Content>
                 <Text>این قسمت هنوز در حال ساخت و سازه
                     و به زودی با کلی فیچر باحال منتشر میشه!</Text>

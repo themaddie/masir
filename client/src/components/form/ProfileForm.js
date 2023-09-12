@@ -56,6 +56,7 @@ const ProfileForm = () => {
     color: ${palette.black};
     font-size: ${fontSize.light}rem;
     font-weight: 500;
+    padding: 2%;
     `;
     const Submit = styled.input.attrs(props => ({
         type: "submit",

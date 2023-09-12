@@ -1,8 +1,10 @@
 // STYLE
 import { styled, useTheme } from "styled-components";
 import { Close } from "@mui/icons-material";
+// COMPONENT
+import Label from "../../../components/Label";
 
-const EditRoadModal = () => {
+const EditStepModal = ({ modalHandler, value }) => {
   const { palette, fontSize, breakpoint, border } = useTheme();
 
   const ModalWrapper = styled.div`
@@ -97,23 +99,11 @@ const EditRoadModal = () => {
     font-size: ${fontSize.light}rem;
     font-weight: normal;
     background-color: ${palette.white};
-  `;
-  const Select = styled.select`
-    width: 100%;
-    height: 50px;
     padding: 2%;
-    border: ${border.size}px solid ${palette.black};
-    border-bottom-right-radius: ${border.radius}px;
-    border-bottom-left-radius: ${border.radius}px;
-    text-align: center;
-    color: ${palette.black};
-    font-size: ${fontSize.light}rem;
-    font-weight: normal;
-    background-color: ${palette.white};
   `;
   const ModalSubmit = styled.input.attrs((props) => ({
     type: "submit",
-    value: "ثبت",
+    value: "ویرایش",
   }))`
     width: 50%;
     height: 50px;
@@ -151,25 +141,29 @@ const EditRoadModal = () => {
     <ModalWrapper>
       <Modal>
         <ModalTitle>
-          <ModalText>اضافه کردن به مسیر</ModalText>
-          <Close style={{ width: "28px", height: "28px", cursor: "pointer" }} />
+          <ModalText> ویرایش کردن </ModalText>
+          <Close
+            style={{ width: "28px", height: "28px", cursor: "pointer" }}
+            onClick={modalHandler}
+          />
         </ModalTitle>
         <ModalContent>
           <InputContainer>
-            <InputTitle>نام مسیر</InputTitle>
-            <Input type="text" />
+            <InputTitle>گام</InputTitle>
+            <Input type="text" value={value} />
           </InputContainer>
-          <InputContainer>
-            <InputTitle>اولویت مسیر</InputTitle>
-            <Select>
-            <option>اول</option>
-            <option>دوم</option>
-            <option>سوم</option>
-            <option>چهارم</option>
-            <option>پنجم</option>
-            <option>ششم</option>
-            </Select>
-          </InputContainer>
+          <Row>
+            <Label color={palette.roads.gray} selected name="زندگی" />
+            <Label color={palette.roads.yellow} name="کار" />
+            <Label color={palette.roads.pink} name="درس" />
+            <Label color={palette.roads.purple} name="جلسه" />
+            <Label color={palette.roads.green} name="کنکور" />
+            <Label color={palette.roads.blue} name="تفریح" />
+          </Row>
+          <Row>
+            <label>میخوای این گام هر روز تکرار بشه؟</label>
+            <input type="checkbox" />
+          </Row>
           <ModalSubmit />
         </ModalContent>
       </Modal>
@@ -177,4 +171,4 @@ const EditRoadModal = () => {
   );
 };
 
-export default EditRoadModal;
+export default EditStepModal;
