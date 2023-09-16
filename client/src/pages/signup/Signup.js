@@ -1,12 +1,11 @@
 // STYLE
-import { styled, useTheme } from "styled-components";
+import { styled } from "styled-components";
 // IMG
 import MasirLogo from "../../assets/images/MasirLogo.svg";
 // COMPONENT
 import SignupForm from "../../components/form/SignupForm";
 
 const Signup = () => {
-  const { palette, breakpoint } = useTheme();
 
   const Wrapper = styled.div`
     width: 100vw;
@@ -20,7 +19,7 @@ const Signup = () => {
     margin-top: 4rem;
   `;
   const Content = styled.div`
-   min-height: calc(100vh - 170px);
+   min-height: calc(100vh - 155px);
     display: flex;
     flex-direction: column;
     justify-content: center;

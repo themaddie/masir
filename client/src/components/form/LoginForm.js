@@ -48,6 +48,7 @@ const LoginForm = () => {
     border-bottom: none;
     font-size: ${fontSize.light}rem;
     font-weight: 500;
+    cursor: default;
   `;
   const Input = styled.input`
     width: 100%;
@@ -76,8 +77,14 @@ const LoginForm = () => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: ${breakpoint.tablet}px) {
+      width: 70%;
+    }
+    @media (max-width: ${breakpoint.phone}px) {
+      width: 80%;
+    }
   `;
-  const Titlee = styled.span`
+  const Or = styled.span`
   display: block;
   cursor: default;
   padding-top: 5px;
@@ -122,6 +129,7 @@ const LoginForm = () => {
     font-size: ${fontSize.light}rem;
     font-weight: 500;
     cursor: pointer;
+    margin-bottom: 2rem;
     @media (max-width: ${breakpoint.tablet}px) {
       width: 70%;
     }
@@ -156,7 +164,7 @@ const LoginForm = () => {
         </Link>
         <Box>
           <Dashed />
-          <Titlee>یا</Titlee>
+          <Or>یا</Or>
           <Dashed />
         </Box>
         <Link style={{ width: "100%" }} to="/signup">

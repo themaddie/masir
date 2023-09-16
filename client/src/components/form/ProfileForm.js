@@ -44,6 +44,7 @@ const ProfileForm = () => {
     border-bottom: none;
     font-size: ${fontSize.light}rem;
     font-weight: 500;
+    cursor: default;
     `;
     const Input = styled.input`
     width: 100%;

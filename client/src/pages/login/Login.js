@@ -1,13 +1,11 @@
 // STYLE
-import { styled, useTheme } from "styled-components";
+import { styled } from "styled-components";
 // IMG
 import MasirLogo from "../../assets/images/MasirLogo.svg";
 // COMPONENT
 import LoginForm from "../../components/form/LoginForm";
 
 const Login = () => {
-  const { palette, breakpoint } = useTheme();
-
   const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;
@@ -23,6 +21,7 @@ const Login = () => {
   display: block;
   width: 100%;
   text-align: center;
+  cursor: default;
   `;
   const Content = styled.div`
    min-height: calc(100vh - 170px);
@@ -36,7 +35,7 @@ const Login = () => {
   return (
     <Wrapper>
       <Logo src={MasirLogo} />
-      <Slogan>بیا از مسیر لذت ببریم!</Slogan>
+      <Slogan>بیا از مسیر لذت ببریم! :)</Slogan>
       <Content>
         <LoginForm />
       </Content>

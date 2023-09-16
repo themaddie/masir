@@ -2,7 +2,7 @@
 import { styled, useTheme } from "styled-components";
 
 const Header = ({ title }) => {
-  const { palette, border } = useTheme();
+  const { palette, border, breakpoint, fontSize } = useTheme();
 
   const Wrapper = styled.div`
     width: 100%;
@@ -17,8 +17,12 @@ const Header = ({ title }) => {
   `;
   const Title = styled.h1`
     display: block;
-    margin-top: 70px;
+    margin: 70px 5px 0 5px;
     cursor: default;
+    @media (max-width: ${breakpoint.phone}px) {
+      margin: 75px 5px 0 5px;
+      font-size: ${fontSize.bold}rem;
+    }
   `;
 
   return (

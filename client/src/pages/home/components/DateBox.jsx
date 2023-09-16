@@ -15,6 +15,7 @@ const DateBox = () => {
     font-size: ${fontSize.ligth}rem;
     font-weight: 600;
     background-color: ${palette.primary};
+    cursor: default;
   `;
   return <Wrapper>{Date.now()}</Wrapper>;
 };

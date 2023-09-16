@@ -10,7 +10,7 @@ import ProfileBox from "./components/ProfileBox";
 
 const Home = () => {
     const { breakpoint } = useTheme();
-    // BODY
+    
     const Wrapper = styled.div`
     width: 100vw;
     height: 100vh;

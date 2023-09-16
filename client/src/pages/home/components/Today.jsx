@@ -65,24 +65,23 @@ const Today = () => {
         />
       </Title>
       <Content>
-        <Step step="پیانو" label={palette.roads.gray} done={true} />
-        <Step step="پروژه ری اکت" label={palette.roads.pink} done={false} />
-        <Step step="تمیز کردن خونه" label={palette.roads.pink} done={false} />
-        <Step step="قصه نوشتن" label={palette.roads.purple} done={false} />
+        <Step step="پیانو" label={palette.roads.gray} />
+        <Step step="پروژه ری اکت" label={palette.roads.pink} />
+        <Step step="تمیز کردن خونه" label={palette.roads.pink} />
+        <Step step="قصه نوشتن" label={palette.roads.purple} />
         <Step step="کنکور" label={palette.roads.blue} done={true} />
         <Step
           step="غذا درست کردن برای مهمونی فردا که خیلی مهم و حیاتیه"
           label={palette.roads.green}
-          done={false}
         />
-        <Step step="تسک ۸" label={palette.roads.blue} done={false} />
-        <Step step="تسک ۹" label={palette.roads.yellow} done={false} />
-        <Step step="10" label={palette.roads.pink} done={false} />
-        <Step step="11" label={palette.roads.pink} done={false} />
-        <Step step="12" label={palette.roads.pink} done={false} />
-        <Step step="13" label={palette.roads.pink} done={false} />
-        <Step step="14" label={palette.roads.pink} done={false} />
-        <Step step="15" label={palette.roads.green} done={false} />
+        <Step step="تسک ۸" label={palette.roads.blue} />
+        <Step step="تسک ۹" label={palette.roads.yellow} />
+        <Step step="10" label={palette.roads.pink} />
+        <Step step="11" label={palette.roads.pink} />
+        <Step step="12" label={palette.roads.pink} />
+        <Step step="13" label={palette.roads.pink} />
+        <Step step="14" label={palette.roads.pink} />
+        <Step step="15" label={palette.roads.green} />
       </Content>
       {modal ? <AddTodayModal modalHandler={modalHandler} /> : ""}
     </Wrapper>
