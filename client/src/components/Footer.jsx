@@ -21,7 +21,7 @@ const Footer = () => {
   
   return (
     <Wrapper>
-      <Link to={"/"}>
+      <Link to={"/home"}>
         <MeetingRoomRounded style={{ color: `${palette.black}` }} />
       </Link>
     </Wrapper>
