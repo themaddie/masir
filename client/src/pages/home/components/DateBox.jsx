@@ -17,7 +17,7 @@ const DateBox = () => {
     background-color: ${palette.primary};
     cursor: default;
   `;
-  return <Wrapper>{Date.now()}</Wrapper>;
+  return <Wrapper>۱۸ شهریور - یکشنبه</Wrapper>;
 };
 
 export default DateBox;
